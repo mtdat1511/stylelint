@@ -17,7 +17,7 @@
     "eject": "react-scripts eject",
     "lint": "npm run lint:js && npm run lint:style",
     "lint:js": "eslint --cache --fix --ext .js,.jsx ./src",
-    "lint:style": "stylelint --fix \"src/**/*.scss\" --syntax css",
+    "lint:style": "stylelint --fix \"src/**/*.css\" --syntax css",
     "prettier": "prettier -c \"**/src/**\" --write",
     "stylelint": "stylelint \"./**/*.css\"",
     "lint-staged:js": "eslint --cache --fix --ext .js,.jsx",
@@ -30,7 +30,7 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,jsx,css,md,json}": [
+    "**/*.{js,jsx,css,scss, md,json}": [
       "npm run lint-staged:prettier",
       "git add"
     ],
