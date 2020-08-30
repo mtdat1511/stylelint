@@ -38,7 +38,7 @@
       "npm run lint-staged:js",
       "git add"
     ],
-    "**/*.scss": [
+    "*.scss": [
       "npm run lint-staged:style",
       "git add"
     ]
