@@ -6,21 +6,7 @@
     "rule-empty-line-before": "never",
     "at-rule-no-unknown": null,
     "order/order": [
-      [
-        "dollar-variables",
-        "custom-properties",
-        "at-rules",
-        "declarations",
-        {
-          "type": "at-rule",
-          "name": "supports"
-        },
-        {
-          "type": "at-rule",
-          "name": "media"
-        },
-        "rules"
-      ],
+      ["custom-properties", "declarations"],
       { "severity": "error" }
     ],
     "order/properties-order": [
