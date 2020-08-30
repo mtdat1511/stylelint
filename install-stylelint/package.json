@@ -14,7 +14,34 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "npm run lint:js && npm run lint:style",
+    "lint:js": "eslint --cache --fix --ext .js,.jsx ./src",
+    "lint:style": "stylelint --fix \"src/**/*.scss\" --syntax scss",
+    "prettier": "prettier -c \"**/src/**\" --write",
+    "stylelint": "stylelint \"./**/*.scss\"",
+    "lint-staged:js": "eslint --cache --fix --ext .js,.jsx",
+    "lint-staged:style": "stylelint --fix --syntax scss",
+    "lint-staged:prettier": "prettier -c --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,scss,md,json}": [
+      "npm run lint-staged:prettier",
+      "git add"
+    ],
+    "**/*.{js,jsx}": [
+      "npm run lint-staged:js",
+      "git add"
+    ],
+    "**/*.scss": [
+      "npm run lint-staged:style",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +57,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13",
+    "prettier": "^2.1.1",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.1.2"
   }
 }
