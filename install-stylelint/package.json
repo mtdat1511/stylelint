@@ -21,7 +21,7 @@
     "prettier": "prettier -c \"**/src/**\" --write",
     "stylelint": "stylelint \"./**/*.css\"",
     "lint-staged:js": "eslint --cache --fix --ext .js,.jsx",
-    "lint-staged:style": "stylelint --fix --syntax scss",
+    "lint-staged:style": "stylelint --fix --syntax css",
     "lint-staged:prettier": "prettier -c --write"
   },
   "husky": {
@@ -38,7 +38,7 @@
       "npm run lint-staged:js",
       "git add"
     ],
-    "*.css": [
+    "**/*.css": [
       "npm run lint-staged:style",
       "git add"
     ]
