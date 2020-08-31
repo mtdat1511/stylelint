@@ -20,8 +20,8 @@
     "lint:style": "stylelint \"src/**/*.css\" --syntax css",
     "prettier": "prettier -c \"**/src/**\" --write",
     "stylelint": "stylelint \"./**/*.css\"",
-    "lint-staged:js": "eslint --cache --fix --ext .js,.jsx",
-    "lint-staged:style": "stylelint --fix --syntax css",
+    "lint-staged:js": "eslint --cache  --ext .js,.jsx",
+    "lint-staged:style": "stylelint --syntax css",
     "lint-staged:prettier": "prettier -c --write"
   },
   "husky": {
